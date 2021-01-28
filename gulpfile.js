@@ -7,12 +7,12 @@ const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
+const webpcreate = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const posthtml = require('gulp-posthtml');
 const include = require("posthtml-include");
 const del = require("del");
-const server = require("browser-sync").create();
+const servercreate = require("browser-sync").create();
 const concat = require("gulp-concat");
 
 
@@ -30,7 +30,7 @@ const styles = () => {
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
+    .pipe(servercreate.stream());
 }
 
 exports.styles = styles;
@@ -42,7 +42,7 @@ const images = () => {
     "source/img/**/*.{jpg,png,svg}"])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
+      imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"));
@@ -53,7 +53,7 @@ exports.images = images;
 
 const webp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
+    .pipe(webpcreate({quality: 90}))
     .pipe(gulp.dest("source/img"));
 }
 
@@ -130,7 +130,7 @@ exports.build = build;
 
 // Server
 const server = (done) => {
-  server.init({
+  servercreate.init({
     server: {
       baseDir: "build"
     },
@@ -146,10 +146,10 @@ exports.server = server;
 
 // Watcher
 const watcher = () => {
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", server.reload));
-  gulp.watch("source/*.html", gulp.series("html", server.reload));
-  gulp.watch("source/js/*.js", gulp.series("scripts", "html", server.reload));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("styles"));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", servercreate.reload));
+  gulp.watch("source/*.html", gulp.series("html", servercreate.reload));
+  gulp.watch("source/js/*.js", gulp.series("scripts", "html", servercreate.reload));
 }
 
 exports.default = gulp.series(
