@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,424 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <body>
+  <body class="page-body">
+    <header class="page-header">
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__city select">
+          <p class="contacts__city-name select__label"></p>
+          <button class="select__button">
+            <svg width="20" height="20" aria-label="Выбрать город">
+              <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+
+          <ul class="contacts__city-list select__list">
+            <li class="contacts__city-item select__item">
+              <input class="contacts__city-input visually-hidden select__input" type="radio" name="city" value="Saint-Petersburg" id="Saint-Petersburg-input" checked>
+              <label class="contacts__city-label select__label" for="Saint-Petersburg-input">Санкт-Петербург</label>
+            </li>
+            <li class="contacts__city-item select__item">
+              <input class="contacts__city-input visually-hidden select__input" type="radio" name="city" value="Moscow" id="Moscow-input">
+              <label class="contacts__city-label select__label" for="Moscow-input">Москва</label>
+            </li>
+          </ul>
+        </div>
+
+        <a class="contacts__link" href="tel:+78126135838">+7 (812) 613-58-38</a>
+        <p class="contacts__schedule">Пн–пт 10:00–19:00, сб-вс 10:00–17:00</p>
+        <a class="contacts__link" href="#">Напишите нам</a>
+        <a class="contacts__link" href="#">Свяжитесь с директором</a>
+
+        <ul class="contacts__social social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="16" height="16" aria-label="Telegram">
+                <use xlink:href="img/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="18" height="14" aria-label="Skype">
+                <use xlink:href="img/sprite.svg#icon-skype"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg width="16" height="16" aria-label="Whatsapp">
+                <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <a class="page-header__logo-link">
+        <picture>
+          <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
+
+          <img class="page-header__logo" src="img/logo@1x.png" width="64" height="73" srcset="img/logo@2x.jpg 2x" alt="Top 3D shop">
+        </picture>
+        <p class="page-header__slogan">Ваш эксперт на рынке 3D-техники</p>
+      </a>
+
+      <a class="page-header__reviews" href="https://market.yandex.ru/shop--top-3d-shop/239950/reviews?clid=703">
+        <picture>
+          <source type="image/webp" srcset="img/yandex-reviews@1x.webp 1x, img/yandex-reviews@2x.webp 2x">
+
+          <img src="img/yandex-reviews@1x.png" width="64" height="73" srcset="img/yandex-reviews@2x.jpg 2x" alt="Прочтите отзывы о нас">
+        </picture>
+      </a>
+
+      <form class="page-header__search-form search-form" action="https://echo.htmlacademy.ru" method="get">
+        <label class="visually-hidden" for="search-input">Поиск по сайту</label>
+        <input class="search-form__input" type="text" name="search" placeholder="Введите запрос, например, Formlabs Form 2" id="search-input">
+        <button class="search-form__button" type="submit">Найти</button>
+      </form>
+
+      <a class="page-header__entry" href="#">
+        <svg width="24" height="24" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-entry"></use>
+        </svg>
+        Войти
+      </a>
+
+      <a class="page-header__entry" href="#">
+        <svg width="24" height="24" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-cart"></use>
+        </svg>
+        Корзина пуста
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Акции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">О нас</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Оплата и доставка</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Что с моим заказом?</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Гос.закупки</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Мастер-классы</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Контакты</a>
+          </li>
+          <li class="main-nav__item catalog">
+            <p class="catalog__title">Каталог</p>
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                3D-принтеры
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                3D-сканеры
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Станки
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Роботы
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Образование
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Стоматологам
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Гаджеты
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Материалы
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                ПО
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Решения
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 3</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 4</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Учебный центр
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 3</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="catalog__item">
+                Услуги
+                <svg width="20" height="20" aria-label="Открыть под-меню">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+                <ul class="catalog__sub-menu">
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 1</a>
+                  </li>
+                  <li class="catalog__sub-item">
+                    <a href="#">Пункт 2</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <picture>
+        <source type="image/webp" srcset="img/slide-1@1x.webp 1x, img/slide-1@2x.webp 2x">
+
+        <img src="img/slide-1@1x.png" width="64" height="73" srcset="img/slide-1@2x.jpg 2x" alt="Наша команда">
+      </picture>
+
+      <section class="job">
+        <h2 class="job__title">Твоя работа в крупнейшем интеграторе цифрового производства</h2>
+        <button class="job__button">Отправить резюме</button>
+        <p class="job__info">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </section>
+
+      <section class="description">
+        <h2 class="visually-hidden">О компании</h2>
+        <p class="description__text">Top 3D Shop – лидер по продажам 3D-оборудования в России и странах СНГ. В 2018 мы стали лучшим интегратором 3D оборудования по аддитивным технологиям и цифровому производству по версии <a href="#">3D Print Awards</a>.</p>
+        <p class="description__text">За 6 лет работы более 10 000 клиентов по всей России и СНГ выбрали Top 3D Shop. В 2018 наш оборот составил 600 млн. рублей, в компании работает более 100 сотрудников.</p>
+        <p class="description__text">Новая цель: 1 млрд торгового оборота в этом году и выход на международные рынки. Если вы — целеустремленный специалист, готовый учиться новым навыкам и учить других, мыслите не просто как исполнитель, а как владелец своего направления, то нам по пути!</p>
+      </section>
+
+      <section class="info">
+        <h2 class="info-title">Лучше один раз увидеть:</h2>
+        <ul class="info-list">
+          <li class="info-item">
+            <a href="#">
+              Как устроена наша компания изнутри
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="info-item">
+            <a href="#">
+              Как создавалась компания - необычная история
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="info-item">
+            <a href="#">
+              Читай о нас на 3D Today
+              <svg width="20" height="20" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="video">
+        <h2 class="video__title">Видео о нас</h2>
+
+        <div class="video__controls">
+          <button class="video__control video__control--prev" type="button" aria-label="Предыдущее видео" disabled>
+            <svg width="40" height="40" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#s-icon-review-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="video__control video__control--next" type="button" aria-label="Следующее видео">
+            <svg width="40" height="40" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#s-icon-review-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="video__list">
+          <li class="video__item">
+            <iframe width="550" height="306" src="https://www.youtube.com/embed/OYFOWAL1NlA" allowfullscreen title="Знакомство с top-3D-shop"></iframe>
+          </li>
+          <li class="video__item">
+            <iframe width="550" height="306" src="https://www.youtube.com/embed/SOYBsly_yN8" allowfullscreen title="Итоги 2018 года"></iframe>
+          </li>
+          <li class="video__item">
+            <iframe width="550" height="306" src="https://www.youtube.com/embed/EVyLTHevw4E" allowfullscreen title="Производство 3D-принтеров в Россиии"></iframe>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <template id="slider">
+      <ul class="slider">
+        <li class="slider__slide">
+          <picture>
+            <source type="image/webp" srcset="img/slide-1@1x.webp 1x, img/slide-1@2x.webp 2x">
+
+            <img src="img/slide-1@1x.png" width="1228" height="432" srcset="img/slide-1@2x.jpg 2x" alt="Наша команда">
+          </picture>
+        </li>
+        <li class="slider__slide">
+          <picture>
+            <source type="image/webp" srcset="img/slide-2@1x.webp 1x, img/slide-2@2x.webp 2x">
+
+            <img src="img/slide-2@1x.png" width="1228" height="432" srcset="img/slide-2@2x.jpg 2x" alt="Рабочий процесс">
+          </picture>
+        </li>
+        <li class="slider__slide">
+          <picture>
+            <source type="image/webp" srcset="img/slide-3@1x.webp 1x, img/slide-3@2x.webp 2x">
+
+            <img src="img/slide-3@1x.png" width="1228" height="432" srcset="img/slide-3@2x.jpg 2x" alt="Оборудование">
+          </picture>
+        </li>
+      </ul>
+    </template>
+
     <script src="js/main.js"></script>
   </body>
 </html>
