@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/opensansitlic.woff2") format("woff2"),
+    url("../fonts/opensansitalic.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/opensanssemibold.woff2") format("woff2"),
+    url("../fonts/opensanssemibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFDisplay";
+  src: url("../fonts/sfdisplayregular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFText";
+  src: url("../fonts/sftextmedium.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
