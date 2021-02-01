@@ -1,0 +1,35 @@
+.page-main {
+  padding-top: 70px;
+
+  text-align: center;
+}
+
+.page-main__image {
+  max-width: 1000px;
+  width: calc(100% - 2 * 100px);
+  height: auto;
+
+  @media (max-width: $mobile-only-width) {
+    width: calc(100% - 2 * 20px);
+  }
+}
+
+.page-main__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  padding-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1228px;
+  width: calc(100% - 2 * 106px);
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-only-width) {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+}

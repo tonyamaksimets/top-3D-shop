@@ -11,7 +11,7 @@
 @font-face {
   font-family: "OpenSans";
   src:
-    url("../fonts/opensansitlic.woff2") format("woff2"),
+    url("../fonts/opensansitalic.woff2") format("woff2"),
     url("../fonts/opensansitalic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
@@ -50,6 +50,6 @@
   font-family: "SFText";
   src: url("../fonts/sftextmedium.woff") format("woff");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-display: swap;
 }

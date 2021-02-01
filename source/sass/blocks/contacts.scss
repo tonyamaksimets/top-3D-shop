@@ -1,0 +1,152 @@
+.contacts {
+  padding-left: 120px;
+  padding-right: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background-color: $special-accent-color;
+
+  @media (max-width: $tablet-only-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.contacts__wrapper {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &:first-of-type {
+    width: 520px;
+    margin-right: 20px;
+  }
+
+  &:last-of-type {
+    width: 425px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    justify-content: start;
+
+    &:first-of-type {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &:last-of-type {
+      width: 100%;
+    }
+  }
+}
+
+.contacts__city {
+  width: 135px;
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 10px;
+    margin-right: 30px;
+  }
+}
+
+.contacts__city-name {
+  @include paragraph-style-reset;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: normal;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: $dark-text-color;
+}
+
+.contacts__city-button {
+  @include button-style-reset;
+
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.contacts svg {
+  vertical-align: bottom;
+}
+
+.contacts__city-label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: $dark-text-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  :focus ~ & {
+    color: $accent-color;
+  }
+}
+
+.contacts__city-list {
+  @include list-style-reset;
+
+  border-radius: 4px;
+}
+
+.contacts__link {
+  @include link-style-reset;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: $dark-text-color;
+
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 8px;
+    margin-right: 20px;
+  }
+}
+
+.contacts__schedule {
+  @include paragraph-style-reset;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: $dark-text-color;
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+}

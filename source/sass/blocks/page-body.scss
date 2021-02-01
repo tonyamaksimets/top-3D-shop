@@ -1,0 +1,18 @@
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  min-height: 100%;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.7px;
+  font-family: "SFText", "Arial", sans-serif;
+  color: $basic-text-color;
+
+  &--main-nav-opened {
+    position: fixed;
+  }
+}

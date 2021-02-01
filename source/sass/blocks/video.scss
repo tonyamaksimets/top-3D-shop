@@ -1,0 +1,154 @@
+.video {
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 105px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 138px;
+  padding-right: 138px;
+  max-width: 1440px;
+  width: calc(100% - 2 * 48px);
+  box-sizing: border-box;
+
+  text-align: left;
+
+  background-color: $dark-background-color;
+
+  @media (max-width: $tablet-only-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: calc(100% - 2 * 20px);
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
+.video__title {
+  @include title-style-reset;
+
+  margin-bottom: 60px;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: normal;
+  font-family: "SFDisplay", "Arial", sans-serif;
+  color: $accent-text-color;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+.video__controls {
+  position: absolute;
+  top: 70px;
+  right: 142px;
+
+  @media (max-width: $tablet-only-width) {
+    display: none;
+  }
+}
+
+.video__control {
+  @include button-style-reset;
+
+  border: 1px solid $light-border-color;
+
+  &--prev {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &--next {
+    margin-left: -5px;
+
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+  }
+
+  &:disabled:hover {
+    color: $basic-text-color;
+  }
+}
+
+.video__control svg {
+  vertical-align: bottom;
+}
+
+.video__wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.video__list {
+  @include list-style-reset;
+
+  display: flex;
+
+  @media (max-width: $tablet-only-width) {
+    display: block;
+  }
+}
+
+.video__item {
+  width: calc((100% - 73px) / 2);
+  flex-shrink: 0;
+
+  &:nth-child(2n + 1) {
+    margin-right: 73px;
+  }
+
+  @media (max-width: $tablet-only-width) {
+    margin-bottom: 30px;
+    width: 100%;
+
+    text-align: center;
+
+    &:nth-child(2n + 1) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.video__list iframe {
+  width: 100%;
+
+  border: none;
+
+  @media (max-width: $tablet-only-width) {
+    width: 550px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 280px;
+    height: auto;
+  }
+}

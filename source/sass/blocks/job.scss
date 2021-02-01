@@ -1,0 +1,59 @@
+.job {
+  padding-bottom: 30px;
+  width: 350px;
+
+  text-align: left;
+
+  @media (max-width: $mobile-only-width) {
+    width: 100%;
+  }
+}
+
+.job__title {
+  @include title-style-reset;
+
+  margin-bottom: 40px;
+
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 32px;
+  letter-spacing: normal;
+  font-family: "SFDisplay", "Arial", sans-serif;
+  color: $dark-text-color;
+}
+
+.job__button {
+  @include button-style-reset;
+
+  margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 280px;
+  box-sizing: border-box;
+
+  color: $light-text-color;
+
+  background-color: $accent-color;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $dark-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.job__info {
+  @include paragraph-style-reset;
+
+  width: 280px;
+
+  font-size: 14px;
+  line-height: 17px;
+  color: $add-text-color;
+}

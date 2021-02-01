@@ -1,0 +1,59 @@
+.select {
+  position: relative;
+}
+
+.select__label {
+  display: inline-block;
+}
+
+.select__icon {
+  &:last-child {
+    display: none;
+  }
+
+  .select--opened &:last-child {
+    display: block;
+  }
+
+  .select--opened &:first-child {
+    display: none;
+  }
+}
+
+.select__button {
+  @include button-style-reset;
+
+  vertical-align: bottom;
+}
+
+.select__list {
+  @include list-style-reset;
+
+  position: absolute;
+  z-index: 5;
+
+  display: none;
+  width: 100%;
+
+  background-color: $basic-background-color;
+  border: 1px solid $border-color;
+
+  .select__button:hover ~ &,
+  .select:focus-within &,
+  &:hover {
+    display: block;
+  }
+}
+
+.select__item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

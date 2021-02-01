@@ -1,0 +1,36 @@
+.description {
+  width: 708px;
+
+  text-align: justify;
+
+  @media (max-width: $mobile-only-width) {
+    width: 100%;
+  }
+}
+
+.description__text {
+  @include paragraph-style-reset;
+
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.description__text a {
+  @include link-style-reset;
+
+  color: $accent-color;
+
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,20 @@
+.social {
+  @include list-style-reset;
+
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+
+.social__link {
+  color: $dark-text-color;
+
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

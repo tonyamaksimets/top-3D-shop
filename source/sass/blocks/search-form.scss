@@ -1,0 +1,71 @@
+.search-form {
+  position: relative;
+}
+
+.search-form__input {
+  position: relative;
+
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 16px;
+  padding-right: 90px;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: "OpenSans", "Arial", sans-serif;
+  color: $dark-text-color;
+
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $placeholder-text-color;
+  }
+
+  &:hover {
+    background-color: $dark-background-color;
+  }
+
+  &:focus {
+    border-color: $dark-border-color;
+  }
+}
+
+.search-form__button {
+  @include button-style-reset;
+
+  position: absolute;
+  top: 3px;
+  right: 3px;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: 75px;
+  box-sizing: border-box;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: normal;
+  font-family: "OpenSans", "Arial", sans-serif;
+  text-align: center;
+  color: $accent-color;
+
+  background-color: $basic-background-color;
+  border: 2px solid $accent-color;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $light-text-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

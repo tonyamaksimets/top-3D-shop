@@ -1,0 +1,40 @@
+.slider {
+  @include list-style-reset;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1228px;
+  width: calc(100% - 2 * 106px);
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-only-width) {
+    display: none;
+  }
+}
+
+.slider__slide {
+  display: none;
+
+  animation: show 1.5s;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__image {
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+@keyframes show {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
