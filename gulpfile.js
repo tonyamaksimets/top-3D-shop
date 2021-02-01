@@ -145,11 +145,18 @@ exports.server = server;
 
 
 // Watcher
+const refresh = (done) => {
+  servercreate.reload();
+  done();
+};
+
+exports.refresh = refresh;
+
 const watcher = () => {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("styles"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", servercreate.reload));
-  gulp.watch("source/*.html", gulp.series("html", servercreate.reload));
-  gulp.watch("source/js/*.js", gulp.series("scripts", "html", servercreate.reload));
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("scripts", "html", "refresh"));
 }
 
 exports.default = gulp.series(
